@@ -33,6 +33,8 @@ class imc_Fragment : Fragment() {
         _b = FragmentImcBinding.inflate(inflater, container, false)
         return b.root
 
+
+        // Meter ésto en ViewCreate
         b.sBarAltura.setOnSeekBarChangeListener(object :
             SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
@@ -120,6 +122,8 @@ class imc_Fragment : Fragment() {
         dialog.show(supportFragmentManager, "TablaPeso")
     }
 }
+
+
 
 
 

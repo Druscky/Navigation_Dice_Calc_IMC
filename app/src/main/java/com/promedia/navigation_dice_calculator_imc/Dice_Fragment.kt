@@ -11,7 +11,15 @@ import com.promedia.navigation_dice_calculator_imc.databinding.FragmentDiceBindi
 class Dice_Fragment : Fragment() {
     private var _b: FragmentDiceBinding? = null
     private val b get() = _b!!
-
+    private lateinit var myView : View
+    private val dados = arrayOf<Int>(
+        R.drawable.dice1,
+        R.drawable.dice2,
+        R.drawable.dice3,
+        R.drawable.dice4,
+        R.drawable.dice5,
+        R.drawable.dice6)
+    private var cont = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,5 +34,22 @@ class Dice_Fragment : Fragment() {
         _b = FragmentDiceBinding.inflate(inflater, container, false)
         return b.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        b.ivDado1.setOnClickListener { clickOnDado() }
+        b.ivDado2.setOnClickListener { clickOnDado() }
 
+    }
+
+    fun clickOnDado(){
+        val d1 = (1..6).random()
+        val d2 = (1..6).random()
+        b.ivDado1.setImageResource(dados[d1-1])
+        b.ivDado2.setImageResource(dados[d2-1])
+        b.tvContador.text = (d1 + d2).toString()
+    }
 }
+
+
+
+

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Navigation_Dice_Calculator_IMC</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="meDice">Dados</string>
+    <string name="meCalculator">Calculadora</string>
+    <string name="meIMC">IMC</string>
+</resources>

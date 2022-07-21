@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dice_Fragment">
+
+    <fragment
+        android:id="@+id/dice_Fragment"
+        android:name="com.promedia.navigation_dice_calculator_imc.Dice_Fragment"
+        android:label="fragment_dice_"
+        tools:layout="@layout/fragment_dice_" >
+        <action
+            android:id="@+id/action_dice_Fragment_to_calculator_Fragment"
+            app:destination="@id/calculator_Fragment" />
+        <action
+            android:id="@+id/action_dice_Fragment_to_imc_Fragment"
+            app:destination="@id/imc_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculator_Fragment"
+        android:name="com.promedia.navigation_dice_calculator_imc.Calculator_Fragment"
+        android:label="fragment_calculator_"
+        tools:layout="@layout/fragment_calculator_" >
+        <action
+            android:id="@+id/action_calculator_Fragment_to_dice_Fragment"
+            app:destination="@id/dice_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imc_Fragment"
+        android:name="com.promedia.navigation_dice_calculator_imc.imc_Fragment"
+        android:label="fragment_imc_"
+        tools:layout="@layout/fragment_imc_" >
+        <action
+            android:id="@+id/action_imc_Fragment_to_dice_Fragment"
+            app:destination="@id/dice_Fragment" />
+    </fragment>
+</navigation>

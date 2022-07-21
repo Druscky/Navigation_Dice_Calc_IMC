@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/meDice"
+        android:icon="@drawable/ic_baseline_casino_24"
+        android:title="@string/meDice" />
+    <item
+        android:id="@+id/meCalculator"
+        android:icon="@drawable/ic_calculate_24"
+        android:title="@string/meCalculator" />
+    <item
+        android:id="@+id/meIMC"
+        android:icon="@drawable/ic_baseline_balance_24"
+        android:title="@string/meIMC" />
+</menu>

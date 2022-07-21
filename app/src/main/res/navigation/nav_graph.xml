@@ -9,30 +9,28 @@
         android:id="@+id/dice_Fragment"
         android:name="com.promedia.navigation_dice_calculator_imc.Dice_Fragment"
         android:label="fragment_dice_"
-        tools:layout="@layout/fragment_dice_" >
-        <action
-            android:id="@+id/action_dice_Fragment_to_calculator_Fragment"
-            app:destination="@id/calculator_Fragment" />
-        <action
-            android:id="@+id/action_dice_Fragment_to_imc_Fragment"
-            app:destination="@id/imc_Fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_dice_" />
     <fragment
         android:id="@+id/calculator_Fragment"
         android:name="com.promedia.navigation_dice_calculator_imc.Calculator_Fragment"
         android:label="fragment_calculator_"
-        tools:layout="@layout/fragment_calculator_" >
-        <action
-            android:id="@+id/action_calculator_Fragment_to_dice_Fragment"
-            app:destination="@id/dice_Fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_calculator_" />
     <fragment
         android:id="@+id/imc_Fragment"
         android:name="com.promedia.navigation_dice_calculator_imc.imc_Fragment"
         android:label="fragment_imc_"
         tools:layout="@layout/fragment_imc_" >
         <action
-            android:id="@+id/action_imc_Fragment_to_dice_Fragment"
-            app:destination="@id/dice_Fragment" />
+            android:id="@+id/action_imc_Fragment_to_tablaIMC_Fragment"
+            app:destination="@id/tablaIMC_Fragment" />
     </fragment>
+    <dialog
+        android:id="@+id/tablaIMC_Fragment"
+        android:name="com.promedia.navigation_dice_calculator_imc.TablaIMC_Fragment"
+        android:label="fragment_tabla_i_m_c_"
+        tools:layout="@layout/fragment_tabla_i_m_c_" >
+        <action
+            android:id="@+id/action_tablaIMC_Fragment_to_imc_Fragment"
+            app:destination="@id/imc_Fragment" />
+    </dialog>
 </navigation>
